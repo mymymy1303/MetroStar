@@ -6,8 +6,9 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-		link(rel="stylesheet", href="./css/core.min.css")
-		link(rel="stylesheet", href="./css/main.min.css")
+		link(rel="stylesheet", href="./styles/core.min.css")
+		link(rel="stylesheet", href="./styles/main.min.css")
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&amp;subset=vietnamese" rel="stylesheet")
 		title #{title}
 
 	body(class=bodyClass)
@@ -23,6 +24,7 @@ html(lang="en")
 			js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&autoLogAppEvents=1';
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
+		script.
 			window.twttr = (function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0],
 			t = window.twttr || {};
@@ -37,5 +39,5 @@ html(lang="en")
 			};
 			return t;
 			}(document, "script", "twitter-wjs"));
-		script(src="./js/core.min.js")
-		script(src="./js/main.min.js")
+		script(src="./scripts/core.min.js")
+		script(src="./scripts/main.min.js")

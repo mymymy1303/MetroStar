@@ -1,0 +1,103 @@
+p ,ul ,h1,h2,h3,h4,h5,h6,figure,div, *
+	margin: 0
+	padding: 0
+html, body
+	font-size: 16px
+	line-height: 1.5rem
+	font-weight: 400
+	font-family: 'Montserrat', sans-serif
+
+//Hamburger menu
+.hamburger
+	padding: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	transition-property: opacity, filter
+	transition-duration: 0.45s
+	transition-timing-function: linear
+	font: inherit
+	color: inherit
+	text-transform: none
+	background-color: transparent
+	border: 0
+	margin: 0
+	overflow: visible
+	height: 1.5rem
+	outline: none
+	+media-breakpoint-up(lg)
+		display: none
+	&:focus, &:active
+		outline: none
+		box-shadow: none
+	&:hover
+		opacity: 0.7
+	&.is-active
+		&:hover
+			opacity: 0.7
+		.hamburger-inner
+			background-color: #000
+			&:before, &:after
+				background-color: #000
+
+.hamburger-box
+	width: 1.5rem
+	height: 1.5rem
+	+flex-center()
+	position: relative
+
+.hamburger-inner
+	display: block
+	top: 50%
+	margin-top: -2px
+	width: 20px
+	height: 2px
+	background-color: #000
+	border-radius: 2px
+	position: absolute
+	transition-property: transform
+	transition-duration: 0.3s
+	transition-timing-function: ease
+	&:before, &:after
+		width: 20px
+		height: 2px
+		background-color: #000
+		border-radius: 2px
+		position: absolute
+		transition-property: transform
+		transition-duration: 0.45s
+		transition-timing-function: ease
+	&:before, &:after
+		content: ""
+		display: block
+	&:before
+		top: -5px
+	&:after
+		bottom: -5px
+
+.hamburger--emphatic
+	overflow: hidden
+	.hamburger-inner
+		transition: background-color 0.3s 0.175s ease-in
+		&:before
+			left: 0
+			transition: transform 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.3s linear, left 0.3s 0.175s ease-in
+		&:after
+			top: 5px
+			right: 0
+			transition: transform 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.3s linear, right 0.3s 0.175s ease-in
+	&.is-active .hamburger-inner
+		transition-delay: 0s
+		transition-timing-function: ease-out
+		background-color: transparent !important
+		&:before
+			left: -80px
+			top: -80px
+			transform: translate3d(80px, 80px, 0) rotate(45deg)
+			transition: left 0.3s ease-out, top 0.05s 0.3s linear, transform 0.3s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+		&:after
+			right: -80px
+			top: -80px
+			transform: translate3d(-80px, 80px, 0) rotate(-45deg)
+			transition: right 0.3s ease-out, top 0.05s 0.3s linear, transform 0.3s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)

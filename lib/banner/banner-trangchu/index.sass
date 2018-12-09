@@ -1,0 +1,186 @@
+section.banner-trangchu
+	width: 100%
+	height: 100vh
+	position: relative
+	.swiper-wrapper
+		.swiper-slide
+			figure
+				position: relative
+				padding-top: rem(50px)
+				+media-breakpoint-up(lg)
+					padding-top: rem(100px)
+				.box-zoom
+					img
+						width: 100%
+						height: calc(100vh - 50px)
+						object-fit: cover
+						+media-breakpoint-up(lg)
+							height: calc(100vh - 100px)
+				figcaption
+					position: absolute
+					width: fit-content
+					height: fit-content
+					bottom: rem(72px)
+					left: 50%
+					z-index: 10
+					transform: translateX(-50%)
+					.title
+						margin-bottom: .25rem
+						+media-breakpoint-up(sm)
+							margin-bottom: .75rem
+						h2
+							font-size: 1.25rem
+							font-weight: 600
+							color: $trang
+							text-transform: uppercase
+							text-align: left
+							+media-breakpoint-up(sm)
+								font-size: 1.875rem
+					.description
+						font-size: .91666rem
+						font-weight: 600
+						color: $trang
+						text-align: right
+						+media-breakpoint-up(sm)
+							font-size: 1.375rem
+				.overlay
+					position: absolute
+					width: 100%
+					height: 30%
+					bottom: 0
+					left: 0
+					z-index: 9
+					background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0, 0, 0, .5) 50%, rgba(0,0,0, .01) 100%)
+
+				.video
+					position: absolute
+					width: 3rem
+					height: 3rem
+					top: calc(50vh + 12.5px)
+					left: 50%
+					transform: translate(-50%, -50%)
+					z-index: 11
+					a
+						width: 3rem
+						height: 3rem
+						+flex-center()
+						position: relative
+						img
+							position: absolute
+							top: 50%
+							left: 12px
+							transform: translateY(-50%)
+							z-index: 10
+						&:before
+							position: absolute
+							content: ''
+							width: rem(80px)
+							height: rem(80px)
+							background-color: pink
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -50%)
+							border-radius: 50%
+							background-color: rgb(222, 232, 225)
+							opacity: .8
+							box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2)
+							z-index: 9
+							// animation: play-inner-box 1s infinite
+							// animation-direction: alternate
+						&:after
+							position: absolute
+							content: ''
+							width: rem(100px)
+							height: rem(100px)
+							background-color: blue
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -50%)
+							border-radius: 50%
+							background-color: rgb(222, 232, 225)
+							opacity: 0.4
+							box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2)
+							z-index: 8
+							+media-breakpoint-up(md)
+								animation: play-outer-box .5s infinite
+								animation-direction: alternate
+						@keyframes play-inner-box
+							0%
+								width: rem(50px)
+								height: rem(50px)
+							100%
+								width: rem(80px)
+								height: rem(80px)
+						@keyframes play-outer-box
+							0%
+								width: rem(80px)
+								height: rem(80px)
+							100%
+								width: rem(100px)
+								height: rem(100px)
+					+media-breakpoint-up(lg)
+						top: calc(50vh + 50px)
+
+	.swiper-button-next, .swiper-button-prev
+		background-image: none
+		border: 0
+		outline: none
+		i, em
+			+flex-center()
+			width: 3rem
+			height: 3rem
+			+media-breakpoint-up(md)
+				width: 5rem
+				height: 5rem
+	.swiper-button-prev
+		position: absolute
+		width: 3rem
+		height: 3rem
+		z-index: 11
+		font-size: 3rem
+		color: $trang
+		top: calc(50vh + 25px)
+		transform: translateY(-50%)
+		+media-breakpoint-up(md)
+			left: 5%
+		+media-breakpoint-up(lg)
+			top: calc(50vh + 50px)
+	.swiper-button-next
+		position: absolute
+		width: 3rem
+		height: 3rem
+		z-index: 11
+		font-size: 3rem
+		color: $trang
+		top: calc(50vh + 25px)
+		transform: translateY(-50%)
+		+media-breakpoint-up(md)
+			right: 5%
+		+media-breakpoint-up(lg)
+			top: calc(50vh + 50px)
+
+	.swiper-pagination
+		position: absolute
+		bottom: 2rem
+		left: 50%
+		transform: translateX(-50%)
+		width: 100%
+		height: .875rem
+		z-index: 20
+		+flex-center()
+		.dot
+			display: block
+			width: .625rem
+			height: .625rem
+			background-color: $trang
+			margin-left: rem(9px)
+			margin-right: rem(9px)
+			transition: .5s ease-in-out
+			cursor: pointer
+			&:first-child
+				margin-left: 0
+			&:last-child
+				margin-right: 0
+			&.active
+				background-color: transparent
+				box-shadow: 0 0 0 4px $trang

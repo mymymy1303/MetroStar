@@ -1,0 +1,42 @@
+
+{
+	"dist": "./dist",
+	"plugins": {
+		"src": "./plugins.json",
+		"lib": {
+			"scripts": "./plugins/**/**.js",
+			"styles": "./plugins/**/**.{css,scss,sass}"
+		}
+	},
+	"favicon": {
+		"src": "./favicon",
+		"dest": "./dist"
+	},
+	"fonts": {
+		"src": "./fonts/**/**",
+		"dest": "./dist/fonts"
+	},
+	"webfonts": {
+		"src": "./webfonts/**/**",
+		"dest": "./dist/webfonts"
+	},
+	"images": {
+		"src": "./img/**/**.{jpg,svg,jpeg,png}",
+		"dest": "./dist/img"
+	},
+	"scripts": {
+		"src": "./scripts/main.js",
+		"lib": "./scripts/**/*.js",
+		"dest": "./dist/scripts"
+	},
+	"styles": {
+		"src": "./lib/main.sass",
+		"lib": "./lib/**/*.sass",
+		"dest": "./dist/styles"
+	},
+	"templates": {
+		"src": "./templates/**/*.pug",
+		"lib": "./lib/**/*.pug",
+		"dest": "./dist"
+	}
+}

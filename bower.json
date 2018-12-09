@@ -1,35 +1,36 @@
 {
-	"name": "gulp4-typescript",
-	"version": "1.0.0",
-	"description": "gulp and use typescript for dev",
-	"main": "gulpfile.babel.js",
-	"authors": [
-		"sonvh2510"
-	],
-	"license": "ISC",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/sonvh2510/004.Gulp4-Typescript.git"
-	},
-	"bugs": {
-		"url": "https://github.com/sonvh2510/004.Gulp4-Typescript/issues"
-	},
-	"homepage": "https://github.com/sonvh2510/004.Gulp4-Typescript#readme",
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests",
-		"dist"
-	],
-	"dependencies": {
-		"jquery": "^3.3.1",
-		"bootstrap": "^4.1.3",
-		"offline": "0.7.19",
-		"mdi": "^3.0.39",
-		"linearicons": "^1.0.1",
-		"font-awesome": "^5.5.0",
-		"animate.css": "^3.5.2"
-	}
+  "name": "gulp4-source",
+  "version": "2.0.0",
+  "description": "This is a source for building HTML, CSS, Javascript automatically",
+  "main": "gulpfile.babel.js",
+  "homepage": "https://facebook.com/vuson2510",
+  "authors": [
+    "sonvh2510"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonvh2510/001.Gulp4-Basic"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "dist"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.1.3",
+    "offline": "0.7.19",
+    "mdi": "^3.0.39",
+    "linearicons": "^1.0.1",
+    "font-awesome": "^5.5.0",
+    "animate.css": "^3.5.2",
+    "owl.carousel": "^2.3.4",
+    "fancybox": "^3.5.2",
+    "swiper": "^4.4.2",
+    "fullpage.js": "2.9.5"
+  }
 }
