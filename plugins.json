@@ -1,0 +1,18 @@
+{
+	"styles": [
+		"node_modules/font-awesome/css/font-awesome.min.css",
+		"bower_components/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css",
+		"bower_components/linearicons/dist/web-font/style.css",
+		"bower_components/mdi/css/materialdesignicons.min.css",
+		"bower_components/offline/themes/offline-theme-default.css",
+		"bower_components/offline/themes/offline-language-english.css"
+	],
+	"scripts": [
+		"bower_components/jquery/dist/jquery.min.js",
+		"bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
+		"bower_components/offline/offline.min.js",
+		"plugins/bgimg.js",
+		"plugins/mapping.js",
+		"plugins/mapping-listener.js"
+	]
+}

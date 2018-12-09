@@ -1,0 +1,9 @@
+{
+	"files": [
+		"./src/scripts/main.ts"
+	],
+	"compilerOptions": {
+		"target": "es2015",
+		"noImplicitAny": true
+	}
+}
