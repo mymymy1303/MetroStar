@@ -1,12 +1,48 @@
 $(document).ready(function () {
 
+	try {
+
+		$('.video a').fancybox({
+			autoPlay: true
+		})
+		window.onload = function () {
+			$('.video a').trigger('click');
+		}
+	} catch (error) {
+		
+	}
+
+	try {
+		if($(document).find('.homepage').length > 0) {
+			Mapping.mapElements.from('.canhcam-footer-1 article.footer-wrapper').to('.home-5 .news').use('insertAfter');
+		}
+	} catch (error) {
+		
+	}
+
+	//Fullpage
+
+	if ($(window).width() < 992) {
+	} else {
+		$('#fullpage').fullpage({
+			licenseKey: 'A3DA879C-B1254377-8A906973-AAE812EA',
+			navigation: true,
+			navigationPosition: 'right',
+			paddingBottom: 0,
+			paddingTop: 0,
+			anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6']
+		});
+	}
+
+	//methods
+
 	//Header search toggle button
 	$('.search-toggle').on('click', function (e) {
 		$(e.currentTarget).toggleClass('active');
 		$('.canhcam-header-1 .searchbox').toggleClass('active');
 	})
 
-	$('.sidemenu-backdrop').on('click', function(e){
+	$('.sidemenu-backdrop').on('click', function (e) {
 		$('.canhcam-header-1 .hamburger').removeClass('is-active')
 		$('.sidemenu-wrapper').removeClass('active')
 		$('.sidemenu-backdrop').removeClass('active')
@@ -42,7 +78,6 @@ $(document).ready(function () {
 		},
 	});
 })
-
 
 const headerZoneMapping = () => {
 	try {

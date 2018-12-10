@@ -1,0 +1,94 @@
+section.home-3
+	width: 100%
+	height: auto
+	padding: 2rem 0
+	+media-breakpoint-up(lg)
+		padding: 0
+		.news
+			padding-top: 100px
+	.fp-tableCell
+		height: 100% !important
+		overflow: hidden
+	.news
+		.title-wrapper
+			display: flex
+			flex-direction: column
+			width: 100%
+			margin-bottom: 2rem
+			+media-breakpoint-up(lg)
+				width: fit-content
+				align-items: initial
+				justify-content: initial
+				margin-bottom: 1rem
+		.title
+			h1, h2, h3, h4, h5, h6
+				font-weight: 600
+				color: #606060
+				text-transform: uppercase
+				font-size: 1.75rem
+				margin-bottom: 1rem
+				line-height: 2rem
+				padding-top: 1rem
+				+media-breakpoint-up(lg)
+					font-size: 2.5rem
+					line-height: 2.5rem
+					@media (max-height: 725px)
+						font-size: 1.75rem
+						margin-bottom: 0.25rem
+		.subtitle
+			p
+				&:first-child
+					font-size: rem(21px)
+					font-weight: 600
+					color: #606060
+					text-transform: uppercase
+					text-align: right
+					line-height: 1.25rem
+				&:last-child
+					font-weight: 600
+					color: #606060
+					text-align: right
+					line-height: 1.25rem
+					font-size: .916666rem
+					+media-breakpoint-up(lg)
+						font-size: 1.125rem
+		.full-content
+			text-align: justify
+			font-size: .9375rem
+			font-weight: 400
+			color: $den
+			line-height: rem(22px)
+			+media-breakpoint-up(lg)
+				@media (max-height: 725px)
+					font-size: .875rem
+					line-height: 20px
+		.box-zoom
+			img
+				max-width: 100%
+				height: auto
+				margin-top: 2rem
+				+media-breakpoint-up(lg)
+					margin-top: 1rem
+		.news-images
+			width: fit-content
+			height: fit-content
+			margin-top: 2rem
+			margin-left: auto
+			margin-right: auto
+			display: flex
+			align-items: center
+			flex-direction: column
+			a
+				margin-bottom: 1.5rem
+				&:last-child
+					margin-bottom: 0
+			+media-breakpoint-up(sm)
+				flex-direction: row
+				a
+					margin-bottom: 0
+			+media-breakpoint-up(lg)
+				margin-right: auto
+				margin-left: initial
+				@media (max-height: 725px)
+					transform: scale(.75)
+					margin-top: .5rem
