@@ -2,22 +2,27 @@ $(document).ready(function () {
 
 	try {
 
-		$('.video a').fancybox({
-			autoPlay: true
-		})
-		window.onload = function () {
-			$('.video a').trigger('click');
-		}
+		$(".video a").fancybox({
+			helpers: {
+				media: true
+			},
+			youtube: {
+				autoplay: 1, // enable autoplay
+				start: 1 // set start time in seconds (embed)
+			},
+		});
+
+
 	} catch (error) {
-		
+
 	}
 
 	try {
-		if($(document).find('.homepage').length > 0) {
+		if ($(document).find('.homepage').length > 0) {
 			Mapping.mapElements.from('.canhcam-footer-1 article.footer-wrapper').to('.home-5 .news').use('insertAfter');
 		}
 	} catch (error) {
-		
+
 	}
 
 	//Fullpage
